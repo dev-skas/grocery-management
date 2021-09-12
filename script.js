@@ -21,7 +21,7 @@ function load(){
 
 
 function calldata(){    
-   console.log(products)
+ 
    var output=""
    for(i=0;i<products.length;i++){
        output +=`<tr>
@@ -122,7 +122,7 @@ function serchView(){
     }else{
         document.getElementById("searchLabel").innerText=" Result  found";
 
-        console.log(searchArray);
+      
         products = searchArray
            calldata();
     }
