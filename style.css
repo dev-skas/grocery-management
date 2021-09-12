@@ -1,8 +1,21 @@
 .tableContainer{
     /* position: absolute;   */
-    /* width:90%; */
-    
-    
+    width:100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  overflow-x: scroll;
+
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  
+  }
+  .tableContainer::-webkit-scrollbar {
+  display: none;
+  }
+.headname{
+    background-color:#062855 ;
+    color:white;
+    padding: 10px;
+    width:100%;
 }
 .inputContainer{
     width:300px;
@@ -14,6 +27,12 @@
     color:white;
     padding: 20px;    
     overflow-y: scroll;
+ -ms-overflow-style: none; 
+scrollbar-width: none; 
+
+}
+.inputContainer::-webkit-scrollbar {
+display: none;
 }
 
 .add{
