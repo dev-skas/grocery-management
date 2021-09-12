@@ -1,6 +1,7 @@
 .tableContainer{
-    position: absolute;  
-    width:100%;
+    /* position: absolute;   */
+    /* width:90%; */
+    
     
 }
 .inputContainer{
@@ -21,16 +22,17 @@
     background-color:#062855de;
     color: white;
     right: 30px;
-    bottom:5%; 
+    bottom:15px; 
     position:fixed; 
     border-radius: 50px; 
 }
 
-.add h3{
+.addh{
      position: absolute;
      right: 25px;
-     bottom:0px; 
+     bottom:10px; 
      font-family: 'Times New Roman', Times, serif;
+     font-size: 24px;
  }
 
 
