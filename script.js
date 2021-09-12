@@ -47,6 +47,7 @@ function hide(){
     document.getElementById("inputSec").classList.add("hide");
     document.getElementById("addData").classList.remove("hide");  
     document.getElementById("searchsection").classList.add("hide");
+    document.getElementById("editData").classList.remove("hide");
     document.getElementById("searchData").classList.remove("hide");
    
    }
@@ -55,13 +56,23 @@ function searchhide(){
     document.getElementById("inputSec").classList.add("hide");
     document.getElementById("addData").classList.remove("hide");
     document.getElementById("searchsection").classList.add("hide");
+    document.getElementById("editData").classList.remove("hide");
     document.getElementById("searchData").classList.remove("hide");
    
+   }
+   function edithide(){
+    document.getElementById("editSec").classList.add("hide");
+    document.getElementById("editData").classList.remove("hide");
+    document.getElementById("searchData").classList.remove("hide");
+    document.getElementById("addData").classList.remove("hide");
+
+
    }
 
 function addView(){
        document.getElementById("inputSec").classList.remove("hide");
        document.getElementById("addData").classList.add("hide");
+    document.getElementById("editData").classList.add("hide");
     document.getElementById("searchData").classList.add("hide");
 
        
@@ -69,9 +80,15 @@ function addView(){
 function serchView(){
     document.getElementById("searchsection").classList.remove("hide");
     document.getElementById("searchData").classList.add("hide");
+    document.getElementById("editData").classList.add("hide");
     document.getElementById("addData").classList.add("hide");
-
     
+}
+function editView(){
+    document.getElementById("editSec").classList.remove("hide");
+    document.getElementById("editData").classList.add("hide");
+    document.getElementById("searchData").classList.add("hide");
+    document.getElementById("addData").classList.add("hide");
 }
 
  function submit(){
@@ -136,4 +153,61 @@ function serchView(){
     document.getElementById("searchData").classList.remove("hide");
     products =allProducts 
            calldata();
+   }
+
+  
+   var editsn=0;
+
+   function editData(){
+
+    var getsn = document.getElementById("editsn").value; 
+    editsn = Number(getsn)-1;
+
+    if(getsn ==0 || getsn == ""){
+        document.getElementById("validno").innerText="Enter valid serial number";
+
+    }else if(products.length <= editsn){
+        document.getElementById("validno").innerText="Enter valid serial number";
+
+        
+    }
+    else{
+        document.getElementById("validno").innerText="";
+    
+    
+    document.getElementById("editname").value = products[editsn].Name;
+    document.getElementById("editqn").value =products[editsn].Quantity;
+    document.getElementById("editunit").value =products[editsn].Unit;
+    document.getElementById("editdep").value =products[editsn].Department;
+    document.getElementById("editnote").value =products[editsn].Notes;
+
+   
+   
+}
+  
+   }
+
+   
+
+   function editsubmit(){
+
+   var editname=  document.getElementById("editname").value 
+   var editqn=  document.getElementById("editqn").value 
+   var editunit= document.getElementById("editunit").value 
+   var editdep= document.getElementById("editdep").value 
+   var editnote=  document.getElementById("editnote").value 
+
+       
+
+     const editdata =`{"SN":"${editsn}","Name":"${editname}","Quantity":"${editqn}","Unit":"${editunit}","Department":"${editdep}","Notes":"${editnote}"}`
+
+     const editobj = JSON.parse(editdata);
+    
+
+
+     products[editsn] = editobj ;
+     calldata();
+
+    
+            
    }

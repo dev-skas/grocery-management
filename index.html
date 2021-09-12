@@ -15,7 +15,38 @@
         <h2 style=" font-family: Georgia, 'Times New Roman', Times, serif;">Grocery Management </h2>
     </div>
 
+      <!-- edit section -->
+
+<div id="editSec" class=" hide inputContainer">
+  <h4 onclick="edithide()" style="text-align: right;"> X</h4>
+  <h5 style="text-align: center;">Edit Data</h5>            
+       <label >Seriol Number</label>
+      <input  onkeyup="editData()" type="text" id="editsn"  placeholder="Product Serial No">
+      <span id="validno" style="color: red; font-size: 18px;"></span>
+      <br>
+      <label> Name</label>
+      <input type="text" id="editname" placeholder="Product name..">
+      <br>
+
+      <label>Quantity</label>
+      <input type="number" id="editqn"  placeholder="Product Quantity..">
+      <br>
+
+      <label>Unit</label>
+      <input type="text" id="editunit"  placeholder="Product Unit..">
+      <br>
+
+      <label>Department</label>
+      <input type="text" id="editdep" placeholder="Product Department..">
+      <br>
       
+      <label>Notes</label>
+      <input type="text" id="editnote" placeholder="Notes..">
+      <br>
+  
+      <button onclick="editsubmit()" class="submit"> Submit</button> 
+
+    </div>
 
 <!-- table section  -->
   <div class="tableContainer ">
@@ -79,6 +110,9 @@
   <button onclick="refresh()" class="refreshBtn" ><i  class="fa fa-redo"></i>  Reset</button>
   </div>
   
+
+
+    <span id="editData"onclick="editView()" class="editButton"><i  class="fas fa-edit">  edit Data</i> </span>
 
     <span id="addData"onclick="addView()" class="serachButton"><i  class="fas fa-plus">  Add Data</i> </span>
  
