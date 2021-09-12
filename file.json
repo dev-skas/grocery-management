@@ -24,7 +24,7 @@
             "Notes":"Medium size"
         },{
             "SN":4,
-            "Name":"Tomato ",
+            "Name":"Tomato",
             "Quantity":"1",
             "Unit":"Kg",
             "Department":"Vegetables",
@@ -38,21 +38,84 @@
             "Notes":"Imported"
         },{
             "SN":6,
-            "Name":"Banana ",
+            "Name":"Banana",
             "Quantity":"2",
             "Unit":"Kg",
             "Department":"Fruits",
             "Notes":"Robusta"
         },{
             "SN":7,
-            "Name":"Rice ",
+            "Name":"Rice",
             "Quantity":"10",
             "Unit":"Kg",
             "Department":"Rice",
             "Notes":"Matta Rice"
         },{
             "SN":8,
-            "Name":"Ginger ",
+            "Name":"Ginger",
+            "Quantity":"3oo",
+            "Unit":"gram",
+            "Department":"Vegetables",
+            "Notes":"Organically Grown"
+        },{
+            "SN":9,
+            "Name":"Mango",
+            "Quantity":"1",
+            "Unit":"kg",
+            "Department":"Fruites",
+            "Notes":"Organically Grown"
+        },{
+            "SN":10,
+            "Name":"Oil",
+            "Quantity":"1",
+            "Unit":"L",
+            "Department":"oil",
+            "Notes":"Coconut oil"
+        },{
+            "SN":2,
+            "Name":"Onion",
+            "Quantity":"1",
+            "Unit":"Kg",
+            "Department":"Vegetables",
+            "Notes":"Medium Size"
+        },{
+            "SN":3,
+            "Name":"Potato",
+            "Quantity":"500",
+            "Unit":"gram",
+            "Department":"Vegetables",
+            "Notes":"Medium size"
+        },{
+            "SN":4,
+            "Name":"Tomato",
+            "Quantity":"1",
+            "Unit":"Kg",
+            "Department":"Vegetables",
+            "Notes":" Local, Organically Grown"
+        },{
+            "SN":5,
+            "Name":"Orange",
+            "Quantity":"1",
+            "Unit":"Kg",
+            "Department":"Fruites",
+            "Notes":"Imported"
+        },{
+            "SN":6,
+            "Name":"Banana",
+            "Quantity":"2",
+            "Unit":"Kg",
+            "Department":"Fruits",
+            "Notes":"Robusta"
+        },{
+            "SN":7,
+            "Name":"Rice",
+            "Quantity":"10",
+            "Unit":"Kg",
+            "Department":"Rice",
+            "Notes":"Matta Rice"
+        },{
+            "SN":8,
+            "Name":"Ginger",
             "Quantity":"3oo",
             "Unit":"gram",
             "Department":"Vegetables",

@@ -1,11 +1,16 @@
 var response =[];
-window.addEventListener("load",load)
+var products =[];
+var allProducts=[];
+
+window.addEventListener("load",load);
 
 function load(){
             var xhttp = new XMLHttpRequest ();
         xhttp.onreadystatechange = function(){
             if(this.readyState==4&&this.status==200){
              response =JSON.parse(this.responseText);
+             products  = response.products;  
+             allProducts = products
             calldata(); 
         }
         }
@@ -16,7 +21,7 @@ function load(){
 
 
 function calldata(){    
-   var products = response.products;  
+   console.log(products)
    var output=""
    for(i=0;i<products.length;i++){
        output +=`<tr>
@@ -29,8 +34,10 @@ function calldata(){
                 </tr>`
      
     }
-    document.getElementById("data").innerHTML=output;
    
+
+    document.getElementById("data").innerHTML=output;
+    
 }
 
 
@@ -38,15 +45,34 @@ function calldata(){
 
 function hide(){
     document.getElementById("inputSec").classList.add("hide");
+    document.getElementById("addData").classList.remove("hide");  
+    document.getElementById("searchsection").classList.add("hide");
+    document.getElementById("searchData").classList.remove("hide");
+   
+   }
+   
+function searchhide(){
+    document.getElementById("inputSec").classList.add("hide");
     document.getElementById("addData").classList.remove("hide");
+    document.getElementById("searchsection").classList.add("hide");
+    document.getElementById("searchData").classList.remove("hide");
    
    }
 
 function addView(){
        document.getElementById("inputSec").classList.remove("hide");
        document.getElementById("addData").classList.add("hide");
+    document.getElementById("searchData").classList.add("hide");
+
        
    }
+function serchView(){
+    document.getElementById("searchsection").classList.remove("hide");
+    document.getElementById("searchData").classList.add("hide");
+    document.getElementById("addData").classList.add("hide");
+
+    
+}
 
  function submit(){
 
@@ -67,6 +93,47 @@ function addView(){
     "Department":dep,
     "Notes":note
       });
-      
+    products  = response.products;  
+    allProducts = products
     calldata()
+
+   }
+
+   function search(){
+     products =allProducts 
+    var searchArray =[];
+       var searchData = document.getElementById("searchInput").value;
+      for(var i=0;i<products.length;i++){
+        
+        // if((products[i].Name).toLocaleLowerCase()==(searchData).toLocaleLowerCase())
+        if(((products[i].Name).toLocaleLowerCase()).includes((searchData).toLocaleLowerCase()))
+
+        {
+
+           searchArray.push(products[i]);
+        }
+       
+        
+     }
+    if(searchArray.length==0){
+        products =allProducts 
+        document.getElementById("searchLabel").innerText=" Result not found";
+        calldata();
+    }else{
+        document.getElementById("searchLabel").innerText=" Result  found";
+
+        console.log(searchArray);
+        products = searchArray
+           calldata();
+    }
+    
+   }
+
+   function refresh(){
+    document.getElementById("inputSec").classList.add("hide");
+    document.getElementById("addData").classList.remove("hide");
+    document.getElementById("searchsection").classList.add("hide");
+    document.getElementById("searchData").classList.remove("hide");
+    products =allProducts 
+           calldata();
    }

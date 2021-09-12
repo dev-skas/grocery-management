@@ -1,5 +1,16 @@
+body{
+-ms-overflow-style: none; 
+scrollbar-width: none; 
+
+}
+body::-webkit-scrollbar {
+display: none;
+}
+
 .tableContainer{
-    /* position: absolute;   */
+  margin-top: 20px;
+  
+    position: absolute;  
     width:100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
   overflow-x: scroll;
@@ -16,6 +27,9 @@
     color:white;
     padding: 10px;
     width:100%;
+    position: fixed;
+    /* margin-bottom: 30px; */
+    z-index: 1;
 }
 .inputContainer{
     width:300px;
@@ -23,7 +37,7 @@
     right: 10px;
     bottom: 10px;
     position: fixed; 
-    background-color:#062855de;
+    background-color:#062855;
     color:white;
     padding: 20px;    
     overflow-y: scroll;
@@ -34,25 +48,45 @@ scrollbar-width: none;
 .inputContainer::-webkit-scrollbar {
 display: none;
 }
+.searchSec{
+  width:300px;
+  height: 250px;
+  right: 10px;
+  bottom:80px;
+  position: fixed; 
+  background-color:#062855;
+  color:white;
+  padding: 20px;    
+  border-radius: 5px;
+
+
+}
 
 .add{
-    height: 50px;
+  text-align: center;
+  padding: 10px;
     width: 150px;
-    background-color:#062855de;
+    background-color:#062855;
     color: white;
     right: 30px;
     bottom:15px; 
     position:fixed; 
     border-radius: 50px; 
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.addh{
-     position: absolute;
-     right: 25px;
-     bottom:10px; 
-     font-family: 'Times New Roman', Times, serif;
-     font-size: 24px;
- }
+.serachButton{
+  text-align: center;
+  padding: 10px;
+    width: 150px;
+    background-color:#062855;
+    color: white;
+    right: 30px;
+    bottom:80px; 
+    position:fixed; 
+    border-radius: 50px; 
+    font-family: 'Times New Roman', Times, serif;
+}
 
 
 input[type=text] {
@@ -84,6 +118,14 @@ input[type=text] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+  .refreshBtn{
+    margin-top: 20px;
+    background-color:red;
+    color: white;
+    width: 100px;
+    padding: 2px;
+    border-radius: 50px;
   }
   
 .submit:hover {
