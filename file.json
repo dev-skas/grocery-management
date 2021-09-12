@@ -1,0 +1,76 @@
+{
+    
+    "products":[
+        {
+            "SN":1,
+            "Name":"Apple",
+            "Quantity":"2",
+            "Unit":"kg",
+            "Department":"fruit",
+            "Notes":"no"
+        },{
+            "SN":1,
+            "Name":"Onion",
+            "Quantity":"",
+            "Unit":"",
+            "Department":"",
+            "Notes":""
+        },{
+            "SN":3,
+            "Name":"Potato",
+            "Quantity":"",
+            "Unit":"",
+            "Department":"",
+            "Notes":""
+        },{
+            "SN":4,
+            "Name":"Tomato ",
+            "Quantity":"1",
+            "Unit":"kg",
+            "Department":"",
+            "Notes":" Local, Organically Grown"
+        },{
+            "SN":5,
+            "Name":"Orange ",
+            "Quantity":"1",
+            "Unit":"kg",
+            "Department":"",
+            "Notes":"Imported"
+        },{
+            "SN":6,
+            "Name":"Banana ",
+            "Quantity":"2",
+            "Unit":"kg",
+            "Department":"",
+            "Notes":"Robusta"
+        },{
+            "SN":7,
+            "Name":"Papaya ",
+            "Quantity":"1",
+            "Unit":"",
+            "Department":"",
+            "Notes":"Medium Size"
+        },{
+            "SN":8,
+            "Name":"Ginger ",
+            "Quantity":"0.3",
+            "Unit":"kg",
+            "Department":"",
+            "Notes":"Organically Grown"
+        },{
+            "SN":9,
+            "Name":"Mango",
+            "Quantity":"1",
+            "Unit":"kg",
+            "Department":"",
+            "Notes":""
+        },{
+            "SN":10,
+            "Name":"Coconut",
+            "Quantity":"1",
+            "Unit":"",
+            "Department":"",
+            "Notes":"Organically Grown"
+        }
+    ]
+}

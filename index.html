@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Grocery Challenge</title>
+</head>
+<body>
+  <div class="tableContainer">
+  
+     
+    <table class="table  table-bordered  table-striped">
+   
+        <tr>
+          <th>SN</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Unit</th>
+          <th>Department</th>
+          <th>Notes</th>
+        </tr>
+
+        <tbody id="data"></tbody>
+      
+       
+    </table>
+      
+  </div>
+  <div id="inputSec" class=" hide inputContainer">
+            <h4 onclick="hide()" style="text-align: right;"> X</h4>
+            <h5 style="text-align: center;">Add New Data</h5>            
+                 <!-- <label>Seriol Number</label>
+                <input type="text" id="sn"  placeholder="Product Serial No">
+                <br> -->
+                <label> Name</label>
+                <input type="text" id="name" placeholder="Product name..">
+                <br>
+
+                <label>Quantity</label>
+                <input type="number" id="qn"  placeholder="Product Quantity..">
+                <br>
+
+                <label>Unit</label>
+                <input type="text" id="unit"  placeholder="Product Unit..">
+                <br>
+
+                <label>Department</label>
+                <input type="text" id="dep" placeholder="Product Department..">
+                <br>
+                
+                <label>Notes</label>
+                <input type="text" id="note" placeholder="Notes..">
+                <br>
+            
+                <button onclick="submit()" class="submit"> Submit</button>    
+  
+
+  </div>
+
+
+  <div id="addData" onclick="addView()" class="add">
+    
+    <h3>Add Data</h3>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
