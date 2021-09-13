@@ -151,6 +151,8 @@ function editView(){
     document.getElementById("addData").classList.remove("hide");
     document.getElementById("searchsection").classList.add("hide");
     document.getElementById("searchData").classList.remove("hide");
+    document.getElementById("editData").classList.remove("hide");
+
     products =allProducts 
            calldata();
    }
@@ -174,7 +176,7 @@ function editView(){
     else{
         document.getElementById("validno").innerText="";
     
-    
+  
     document.getElementById("editname").value = products[editsn].Name;
     document.getElementById("editqn").value =products[editsn].Quantity;
     document.getElementById("editunit").value =products[editsn].Unit;
@@ -199,7 +201,7 @@ function editView(){
 
        
 
-     const editdata =`{"SN":"${editsn}","Name":"${editname}","Quantity":"${editqn}","Unit":"${editunit}","Department":"${editdep}","Notes":"${editnote}"}`
+     const editdata =`{"SN":"${editsn+1}","Name":"${editname}","Quantity":"${editqn}","Unit":"${editunit}","Department":"${editdep}","Notes":"${editnote}"}`
 
      const editobj = JSON.parse(editdata);
     
